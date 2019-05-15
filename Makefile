@@ -4,7 +4,6 @@ LIBC_PATH = libc_functions/
 ADD_PATH = additional_functions/
 BONUS_PATH = bonus_functions/
 EXTRA_PATH = extra_functions/
-INCLUDES_PATH = includes
 OBJ_PATH = objects/
 
 GCC = gcc
