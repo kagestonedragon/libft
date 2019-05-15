@@ -90,11 +90,9 @@ t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 int					ft_isspace(int c);
 int					ft_fibonacci(int nb);
 int					ft_find_next_prime(int nb);
-int					ft_ishtab(int c);
 int					ft_isprime(int nb);
 int					ft_istab(int c);
-int					ft_isvtab(int c);
-int					ft_recursive_power(int nb, int power);
+int					ft_power(int nb, int power);
 int					ft_sqrt(int nb);
 
 #endif

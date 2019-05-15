@@ -1,24 +1,13 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: emedea <emedea@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 21:40:45 by emedea            #+#    #+#             */
-/*   Updated: 2019/04/30 18:07:33 by emedea           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include <string.h>
 #include <stdlib.h>
 #include "../includes/libft.h"
 
-char	*ft_strdup(const char *s1)
+char        *ft_strdup(const char *s1)
 {
-	char *duplicate;
-	char *dbegin;
+	char    *duplicate;
+	char    *dbegin;
 
+    if (!(ft_strlen(s1) + 1))
+        return (NULL);
 	duplicate = (char *)malloc(sizeof(char) * (ft_strlen(s1) + 1));
 	if (duplicate == NULL)
 		return (NULL);

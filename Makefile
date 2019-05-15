@@ -4,11 +4,11 @@ LIBC_PATH = libc_functions/
 ADD_PATH = additional_functions/
 BONUS_PATH = bonus_functions/
 EXTRA_PATH = extra_functions/
-INCLUDES_PATH = includes/
+INCLUDES_PATH = includes
 OBJ_PATH = objects/
 
 GCC = gcc
-GCC_FLAGS = -Wall -Wextra -Werror -I $(INCLUDES_PATH)libft.h
+GCC_FLAGS = -Wall -Wextra -Werror
 
 AR = ar
 AR_FLAGS = rcs
@@ -19,7 +19,7 @@ ADD_FUNCS = ft_itoa.c ft_memalloc.c ft_memdel.c ft_putchar.c ft_putchar_fd.c ft_
 
 BONUS_FUNCS = ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c
 
-EXTRA_FUNCS = ft_isspace.c ft_isvtab.c ft_ishtab.c ft_istab.c ft_recursive_power.c ft_sqrt.c ft_fibonacci.c ft_isprime.c ft_find_next_prime.c
+EXTRA_FUNCS = ft_isspace.c ft_istab.c ft_power.c ft_sqrt.c ft_fibonacci.c ft_isprime.c ft_find_next_prime.c
 
 LIBC_FULL = $(addprefix $(LIBC_PATH), $(LIBC_FUNCS))
 ADD_FULL = $(addprefix $(ADD_PATH), $(ADD_FUNCS))
@@ -36,28 +36,37 @@ OBJECTS = $(LIBC_OBJ) $(ADD_OBJ) $(BONUS_OBJ) $(EXTRA_OBJ)
 all: $(NAME)
 
 $(NAME): $(OBJECTS)
-		$(AR) $(AR_FLAGS) $(NAME) $(OBJECTS)
-		ranlib $(NAME)
+		@($(AR) $(AR_FLAGS) $(NAME) $(OBJECTS))
+		@(ranlib $(NAME))
+		@(echo "\n"$(NAME) "was created!")
 
 clean:
-		/bin/rm -rf $(OBJ_PATH)
+		@(/bin/rm -rf $(OBJ_PATH))
+		@(echo "All object files have been deleted!")
 
 fclean: clean
-		/bin/rm -f $(NAME)
+		@(/bin/rm -f $(NAME))
+		@(echo $(NAME) "has been deleted!")
+
 
 re: fclean all
 
 objects:
-		mkdir $(OBJ_PATH)
+		@(mkdir $(OBJ_PATH))
 
 objects/%.o: $(LIBC_PATH)%.c | objects
-		$(GCC) $(GCC_FLAGS) -c $< -o $@
+		@($(GCC) $(GCC_FLAGS) -c $< -o $@)
+		@(echo $< "->" $@)
 
 objects/%.o: $(ADD_PATH)%.c | objects
-		$(GCC) $(GCC_FLAGS) -c $< -o $@
+		@($(GCC) $(GCC_FLAGS) -c $< -o $@)
+		@(echo $< "->" $@)	
 
 objects/%.o: $(BONUS_PATH)%.c | objects
-		$(GCC) $(GCC_FLAGS) -c $< -o $@
+		@($(GCC) $(GCC_FLAGS) -c $< -o $@)
+		@(echo $< "->" $@)
+
 
 objects/%.o: $(EXTRA_PATH)%.c | objects
-		$(GCC) $(GCC_FLAGS) $(GCC_INCLUDES) -c $< -o $@
+		@($(GCC) $(GCC_FLAGS) -c $< -o $@)
+		@(echo $< "->" $@)

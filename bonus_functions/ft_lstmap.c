@@ -1,17 +1,7 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstmap.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: emedea <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/25 20:39:40 by emedea            #+#    #+#             */
-/*   Updated: 2019/05/03 15:10:56 by emedea           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdlib.h>
 #include "../includes/libft.h"
+
+// here should be a function that delete all elements
 
 t_list		*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {

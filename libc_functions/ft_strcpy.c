@@ -1,23 +1,9 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: emedea <emedea@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/04 21:57:15 by emedea            #+#    #+#             */
-/*   Updated: 2019/04/10 21:06:04 by emedea           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include <string.h>
-
-char	*ft_strcpy(char *dst, const char *src)
+char    *ft_strcpy(char *dst, const char *src)
 {
 	int i;
 
 	i = 0;
-	while (src[i] != '\0')
+	while (src[i])
 	{
 		dst[i] = src[i];
 		i++;

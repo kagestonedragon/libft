@@ -1,20 +1,8 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strrchr.c                                       :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: emedea <emedea@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/05 18:52:02 by emedea            #+#    #+#             */
-/*   Updated: 2019/04/11 11:30:02 by emedea           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
+#include "../includes/libft.h"
 
-#include <string.h>
-
-char	*ft_strrchr(const char *s, int c)
+char        *ft_strrchr(const char *s, int c)
 {
-	char	*last;
+	char    *last;
 
 	last = NULL;
 	while (*s)
@@ -25,7 +13,7 @@ char	*ft_strrchr(const char *s, int c)
 		}
 		s++;
 	}
-	if (*s == '\0' && (char)c == '\0')
+	if (!(*s) && !((char)c))
 		return ((char *)s);
 	else
 		return (last);

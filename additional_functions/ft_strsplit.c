@@ -1,17 +1,4 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_strsplit.c                                      :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: emedea <emedea@student.42.fr>              +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/11 14:45:18 by emedea            #+#    #+#             */
-/*   Updated: 2019/05/03 15:05:04 by emedea           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
 #include <stdlib.h>
-#include <strings.h>
 #include "../includes/libft.h"
 
 static int	wordscnt(char const *s, char c, size_t ac)
@@ -57,11 +44,11 @@ static char	**dwarray(int n, char const *s, char c, size_t ac)
 	char	**dwarraybegin;
 
 	cnt = 0;
-	i = -1;
+	i = 0;
 	if (!(dwarray = (char **)malloc(sizeof(char *) * (n + 1))))
 		return (NULL);
 	dwarraybegin = dwarray;
-	while (++i <= ac)
+	while (i <= ac)
 	{
 		if (s[i] != c && s[i])
 			cnt++;
@@ -72,6 +59,7 @@ static char	**dwarray(int n, char const *s, char c, size_t ac)
 			ft_bzero(*dwarray++, cnt + 1);
 			cnt = 0;
 		}
+        i++;
 	}
 	*dwarray = NULL;
 	return (dwarraybegin);

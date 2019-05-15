@@ -1,23 +1,11 @@
-/* ************************************************************************** */
-/*                                                                            */
-/*                                                        :::      ::::::::   */
-/*   ft_lstdel.c                                        :+:      :+:    :+:   */
-/*                                                    +:+ +:+         +:+     */
-/*   By: emedea <marvin@42.fr>                      +#+  +:+       +#+        */
-/*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/04/22 16:44:17 by emedea            #+#    #+#             */
-/*   Updated: 2019/04/30 18:03:09 by emedea           ###   ########.fr       */
-/*                                                                            */
-/* ************************************************************************** */
-
-#include <stdlib.h>
 #include "../includes/libft.h"
+#include <stdlib.h>
 
-void	ft_lstdel(t_list **alst, void (*del)(void *, size_t))
+void        ft_lstdel(t_list **alst, void (*del)(void *, size_t))
 {
-	t_list *temp;
+	t_list  *temp;
 
-	if (!alst || !del)
+	if (!alst || !del || !(*alst))
 		return ;
 	while (*alst)
 	{
