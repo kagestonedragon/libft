@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   libft.h                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: emedea <emedea@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/06 18:46:21 by emedea            #+#    #+#             */
+/*   Updated: 2019/05/17 13:00:09 by emedea           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #ifndef LIBFT_H
 # define LIBFT_H
 # include <string.h>
@@ -75,12 +87,11 @@ void				ft_lstadd(t_list **alst, t_list *new);
 void				ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list				*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
-int					ft_isspace(int c);
 int					ft_fibonacci(int nb);
 int					ft_find_next_prime(int nb);
 int					ft_isprime(int nb);
-int					ft_istab(int c);
 int					ft_power(int nb, int power);
 int					ft_sqrt(int nb);
+int					ft_eof2eos(int c);
 
 #endif

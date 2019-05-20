@@ -1,4 +1,17 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: emedea <emedea@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/11 13:27:26 by emedea            #+#    #+#             */
+/*   Updated: 2019/05/20 14:49:11 by emedea           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include <stdlib.h>
+#include <string.h>
 #include "../includes/libft.h"
 
 char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
@@ -13,9 +26,9 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 	if (!new)
 		return (NULL);
 	while (s[i])
-    {
+	{
 		new[i] = f(i, s[i]);
-        i++;
-    }
+		i++;
+	}
 	return (new);
 }

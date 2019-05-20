@@ -4,10 +4,11 @@ LIBC_PATH = libc_functions/
 ADD_PATH = additional_functions/
 BONUS_PATH = bonus_functions/
 EXTRA_PATH = extra_functions/
+INCLUDE_PATH = includes/
 OBJ_PATH = objects/
 
 GCC = gcc
-GCC_FLAGS = -Wall -Wextra -Werror
+GCC_FLAGS = -Wall -Wextra -Werror -I $(INCLUDE_PATH) 
 
 AR = ar
 AR_FLAGS = rcs
@@ -18,7 +19,7 @@ ADD_FUNCS = ft_itoa.c ft_memalloc.c ft_memdel.c ft_putchar.c ft_putchar_fd.c ft_
 
 BONUS_FUNCS = ft_lstadd.c ft_lstdel.c ft_lstdelone.c ft_lstiter.c ft_lstmap.c ft_lstnew.c
 
-EXTRA_FUNCS = ft_isspace.c ft_istab.c ft_power.c ft_sqrt.c ft_fibonacci.c ft_isprime.c ft_find_next_prime.c
+EXTRA_FUNCS = ft_power.c ft_sqrt.c ft_fibonacci.c ft_isprime.c ft_find_next_prime.c ft_eof2eos.c
 
 LIBC_FULL = $(addprefix $(LIBC_PATH), $(LIBC_FUNCS))
 ADD_FULL = $(addprefix $(ADD_PATH), $(ADD_FUNCS))

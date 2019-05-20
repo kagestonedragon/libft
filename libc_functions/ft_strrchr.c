@@ -1,8 +1,20 @@
-#include "../includes/libft.h"
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: emedea <emedea@student.42.fr>              +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/04/05 18:52:02 by emedea            #+#    #+#             */
+/*   Updated: 2019/05/17 10:38:21 by emedea           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
 
-char        *ft_strrchr(const char *s, int c)
+#include <string.h>
+
+char	*ft_strrchr(const char *s, int c)
 {
-	char    *last;
+	char	*last;
 
 	last = NULL;
 	while (*s)
