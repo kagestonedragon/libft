@@ -44,7 +44,7 @@ In this first part, you must re-code a set of the libc functions, as defined in 
 * `ft_strclr` — sets every character of the string to the value ’\0’.
 
 * `ft_striter` — <b>void ft_striter(char *s, void (*f)(char *));</b> Applies the function f to each character of the string passed as argument. Each character is passed by address to f to be modified if necessary.
-** pp
+  * pp
 
 * `ft_striteri` — applies the function f to each character of the string passed as argument, and passing its index as first argument. Each character is passed by address to f to be modified if necessary.
 * `ft_strmap` — applies the function f to each character of the string given as argument to create a “fresh” new string (with malloc(3)) resulting from the successive applications of f.
