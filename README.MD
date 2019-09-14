@@ -4,7 +4,7 @@ The aim of this project is to code a C library regrouping usual functions that y
 
 ### LibC functions
 
-* `memset 
+* `memset`
 * `bzero`
 * `memcpy` 
 * `memccpy` 
