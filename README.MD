@@ -38,6 +38,11 @@ In this first part, you must re-code a set of the libc functions, as defined in 
 ### Additional functions
 
 * `ft_memalloc` — allocates (with malloc(3)) and returns a “fresh” memory area. The memory allocated is initialized to 0. If the allocation fails, the function returns NULL.
+ * Prototype: <b>void * ft_memalloc(size_t size);</b>
+ * Param. #1: The size of the memory that needs to be allocated.
+ * Return value: The size of the memory that needs to be allocated.
+ * Libc functions: malloc(3)
+ 
 * `ft_memdel` — takes as a parameter the address of a memory area that needs to be freed with free(3), then puts the pointer to NULL.
 * `ft_strnew` — allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’. Each character of the string is initialized at ’\0’. If the allocation fails the function returns NULL.
 * `ft_strdel` — takes as a parameter the address of a string that need to be freed with free(3), then sets its pointer to NULL.
