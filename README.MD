@@ -38,17 +38,12 @@ In this first part, you must re-code a set of the libc functions, as defined in 
 ### Additional functions
 
 * `ft_memalloc` — allocates (with malloc(3)) and returns a “fresh” memory area. The memory allocated is initialized to 0. If the allocation fails, the function returns NULL.
-<p>Prototype — <b>void ft_striter(char *s, void (*f)(char *));</b></p>
-<p>Param. #1 — <b>the string to iterate</b></p>
-<p>Param. #1 — <b>the function to apply to each character of s</b></p>
-<p>Return value — <b>none</b></p>
-<p>Libc functions — <b>none</b></p>
-
 * `ft_memdel` — takes as a parameter the address of a memory area that needs to be freed with free(3), then puts the pointer to NULL.
 * `ft_strnew` — allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’. Each character of the string is initialized at ’\0’. If the allocation fails the function returns NULL.
 * `ft_strdel` — takes as a parameter the address of a string that need to be freed with free(3), then sets its pointer to NULL.
 * `ft_strclr` — sets every character of the string to the value ’\0’.
-* `ft_striter` — <b>void ft_striter(char *s, void (*f)(char *));</b>
+
+* `ft_striter` — void ft_striter(char *s, void (*f)(char *));<
 <p>Applies the function f to each character of the string passed as argument. Each character is passed by address to f to be modified if necessary.</p>
 
 * `ft_striteri` — applies the function f to each character of the string passed as argument, and passing its index as first argument. Each character is passed by address to f to be modified if necessary.
