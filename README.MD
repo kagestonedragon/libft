@@ -202,6 +202,7 @@ I code a set of functions that are either not included in the libc, or included 
 
 <p>The following functions will allow you to manipulate your lists more easilly.</p>
 <p>Structure:</p>
+
 ```c
 typedef structs  s_list{
 void             *content;
@@ -209,6 +210,7 @@ int              content_size;
 struct s_list    *next;
 }                t_list;
 ```
+
 * `ft_lstnew` — allocates (with malloc(3)) and returns a “fresh” link. The variables content and content_size of the new link are initialized by copy of the parameters of the function. If the parameter content is nul, the variable content is initialized to NULL and the variable content_size is initialized to 0 even if the parameter content_size isn’t. The variable next is initialized to NULL. If the allocation fails, the function returns NULL.
   * `Prototype`:      <b>t_list * ft_lstnew(void const *content, size_t content_size);</b>
   * `Param. #1`:      The content to put in the new link.
