@@ -2,6 +2,10 @@
 
 The aim of this project is to code a C library regrouping usual functions that you’ll be allowed to use in all your other projects.
 
+<p align="center">
+  <img src="https://bigpicture.ru/wp-content/uploads/2019/01/rojiman01.jpg" width="100%" alt="auto_make information"/>
+</p>
+
 ### Libc functions
 
 I re-code a set of the libc functions, as defined in their `man`.
@@ -204,7 +208,7 @@ I code a set of functions that are either not included in the libc, or included 
 <p>Structure:</p>
 
 ```c
-typedef structs  s_list{
+typedef struct   s_list{
 void             *content;
 int              content_size;
 struct s_list    *next;
