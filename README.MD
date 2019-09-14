@@ -39,6 +39,7 @@ In this first part, you must re-code a set of the libc functions, as defined in 
 
 * `ft_memalloc` — allocates (with malloc(3)) and returns a “fresh” memory area. The memory allocated is initialized to 0. If the allocation fails, the function returns NULL.
 <p><b>Prototype — void ft_striter(char *s, void (*f)(char *));</b></p>
+
 * `ft_memdel` — takes as a parameter the address of a memory area that needs to be freed with free(3), then puts the pointer to NULL.
 * `ft_strnew` — allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’. Each character of the string is initialized at ’\0’. If the allocation fails the function returns NULL.
 * `ft_strdel` — takes as a parameter the address of a string that need to be freed with free(3), then sets its pointer to NULL.
