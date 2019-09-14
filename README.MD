@@ -48,9 +48,9 @@ In this first part, you must re-code a set of the libc functions, as defined in 
 * `ft_strnew` — allocates (with malloc(3)) and returns a “fresh” string ending with ’\0’. Each character of the string is initialized at ’\0’. If the allocation fails the function returns NULL.
 * `ft_strdel` — takes as a parameter the address of a string that need to be freed with free(3), then sets its pointer to NULL.
 * `ft_strclr` — sets every character of the string to the value ’\0’.
-* `ft_striter` — <b>void ft_striter(char *s, void (*f)(char *));</p>
-
+* `ft_striter` — <b>void ft_striter(char *s, void (*f)(char *));</b>
 <p>Applies the function f to each character of the string passed as argument. Each character is passed by address to f to be modified if necessary.</p>
+
 * `ft_striteri` — applies the function f to each character of the string passed as argument, and passing its index as first argument. Each character is passed by address to f to be modified if necessary.
 * `ft_strmap` — applies the function f to each character of the string given as argument to create a “fresh” new string (with malloc(3)) resulting from the successive applications of f.
 * `ft_strmapi` — applies the function f to each character of the string passed as argument by giving its index as first argument to create a “fresh” new string (with malloc(3)) resulting from the suc- cessive applications of f.
