@@ -3,7 +3,7 @@
 The aim of this project is to code a C library regrouping usual functions that you’ll be allowed to use in all your other projects.
 
 <p align="center">
-  <img src="images/cat.jpg" width="100%" alt="fun"/>
+  <img src="images/cat.jpg" width="50%" alt="fun"/>
 </p>
 
 ### Libc functions
