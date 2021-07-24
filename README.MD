@@ -1,5 +1,7 @@
 # Libft
 
+`Проект реализовывался в рамках обучения в "Школе 21". Переписывание (осмысление работы) некоторых функций стандартной библиотеки си (поведение 1 в 1 со всеми нюансами).`
+
 The aim of this project is to code a C library regrouping usual functions that you’ll be allowed to use in all your other projects.
 
 <p align="left">
